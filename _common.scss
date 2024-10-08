@@ -501,10 +501,10 @@ a {
             @include m.sp {
                 width: 70%;
 
-                &:active {
-                    transform: rotate(0);
-                    /* ホバー時に回転をリセット */
-                }
+
+                transform: rotate(0);
+                /* ホバー時に回転をリセット */
+
             }
 
             &:hover {

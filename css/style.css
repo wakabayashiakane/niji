@@ -428,7 +428,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-1.2471185399deg);
+  transform: rotate(-4.1933272839deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
@@ -437,8 +437,6 @@ a {
 @media screen and (max-width: 768px) {
   .info-menu .info-item .img {
     width: 70%;
-  }
-  .info-menu .info-item .img:active {
     transform: rotate(0);
     /* ホバー時に回転をリセット */
   }
