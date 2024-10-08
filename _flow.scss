@@ -1,0 +1,249 @@
+@use "mixin" as m;
+
+.flow-page {
+
+    .mainvisual {
+        position: relative;
+        height: 30vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* 背景を疑似要素で指定 */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/4864263_s.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            /* 透明度を設定 */
+            z-index: -1;
+            /* 背景をテキストの後ろに */
+        }
+
+        p {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.2rem;
+            z-index: 1;
+            /* テキストを前面に */
+
+            @include m.sp {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+
+    .flow {
+        text-align: center;
+        padding-bottom: 40px;
+
+        .flow-list {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 40px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 120px;
+
+                @include m.sp {
+                    flex-direction: column;
+                    margin-bottom: 40px;
+                }
+
+                .img {
+                    width: 50%;
+                    position: relative;
+                    border: 5px solid #ffffff;
+                    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+                    @include m.sp {
+                        width: 100%;
+                    }
+
+                    span {
+
+                        position: absolute;
+                        top: -5%;
+                        left: 0;
+                        font-size: 10.0rem;
+                        font-family: "Caveat", cursive;
+                        color: #364178;
+                        /* テキストの色 */
+                        text-shadow: 3px 3px 3px #ffffff;
+                        display: flex;
+                        /* テキストを中央に揃えるためにフレックスボックスを使用 */
+                        justify-content: center;
+                        /* 水平方向に中央揃え */
+                        align-items: center;
+                        /* 垂直方向に中央揃え */
+                        text-align: center;
+
+                        @include m.sp {
+                            font-size: 5.5rem;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        opacity: 0.5;
+                    }
+
+                    .number {
+                        position: absolute;
+                        top: -10%;
+                        left: 0;
+                        width: 20%;
+                    }
+                }
+
+                .text {
+                    width: 50%;
+                    padding: 3% 5%;
+
+                    @include m.sp {
+                        width: 100%;
+                    }
+
+                    .title {
+                        font-size: 3.2rem;
+                        margin-bottom: 20px;
+                        position: relative;
+                        padding: 0.6em;
+                        background: -webkit-repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
+                        background: repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
+                        border-radius: 7px;
+
+                        @include m.sp {
+                            font-size: 2.4rem;
+                            margin: 20px 0px;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            top: 100%;
+                            left: 30px;
+                            border: 15px solid transparent;
+                            border-top: 15px solid #ffebbe;
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+
+                    .description {
+                        font-size: 1.6rem;
+                        text-align: left;
+
+                        @include m.sp {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .pricing-table {
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    thead {
+        background-color: rgb(246, 167, 11);
+        color: white;
+    }
+
+    thead th {
+        padding: 15px;
+        font-size: 1.6rem;
+
+
+        &:first-child {
+            border-top-left-radius: 20px;
+            /* 左上に丸みを付ける */
+        }
+
+        &:last-child {
+            border-top-right-radius: 20px;
+            /* 右上に丸みを付ける */
+        }
+    }
+
+    tbody td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        font-size: 1.6rem;
+        color: #333;
+
+
+
+        &:first-child {
+            border-bottom-left-radius: 20px;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 20px;
+            /* 右下に丸みを付ける */
+        }
+    }
+
+    tbody tr {
+
+        &:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        &:hover {
+            background-color: #f1f1f1;
+        }
+
+
+
+
+
+        &:last-child {
+            border-bottom-left-radius: 20px;
+            /* 左下に丸みを付ける */
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 20px;
+            /* 右下に丸みを付ける */
+        }
+    }
+
+    .info-menu {
+        margin-bottom: 250px;
+
+        @include m.sp {
+            margin-bottom: 80px;
+        }
+    }
+
+}

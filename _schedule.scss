@@ -1,0 +1,235 @@
+@use "mixin" as m;
+
+.schedule-page {
+    text-align: center;
+
+    .mainvisual {
+        position: relative;
+        height: 30vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* 背景を疑似要素で指定 */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/4864263_s.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            /* 透明度を設定 */
+            z-index: -1;
+            /* 背景をテキストの後ろに */
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.2rem;
+            z-index: 1;
+
+            /* テキストを前面に */
+            @include m.sp {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 3.2rem;
+        text-align: center;
+        margin: 100px 0px;
+        font-weight: normal;
+    }
+
+    .schedule {
+        background-color: #fff;
+        padding-bottom: 80px;
+        position: relative;
+
+        .schedule-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px 0px 120px;
+            text-align: center;
+            font-size: 2.0rem;
+            margin-top: 80px;
+
+            @include m.sp {
+                flex-direction: column;
+                font-size: 1.6rem;
+            }
+
+            position: relative;
+            /*背景色*/
+            padding: 3em 1em 2em;
+            /*内側余白（上・左右・下）*/
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 95%;
+                height: 10px;
+                top: 0.5em;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0 auto;
+
+                border-top: dotted 10px #78C846;
+                /*ドットの形・大きさ・色*/
+            }
+
+
+
+            .schedule-left {
+                .title {
+                    font-size: 2.4rem;
+                    color: #EB6EAA;
+                    margin-bottom: 20px;
+                }
+
+                .schedule-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+
+                }
+
+                .schedule-item {
+                    background-color: #FFEEF4;
+                    margin-bottom: 30px;
+                    padding: 15px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .schedule-item .time {
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                .schedule-item .event {
+                    color: #000;
+                    margin-left: 40px;
+
+                    @include m.sp {
+                        font-size: 1.6rem;
+                    }
+
+
+
+                }
+
+                .schedule-item:hover {
+                    background-color: #FEE1EC;
+                    transform: translateY(-2px);
+                    transition: all 0.2s ease;
+                }
+            }
+
+            .schedule-right {
+                .title {
+                    font-size: 2.4rem;
+                    color: #50B4E6;
+                    margin-bottom: 20px;
+                }
+
+                .schedule-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .schedule-item {
+                    background-color: #e8f5fc;
+                    margin-bottom: 30px;
+                    padding: 15px;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .schedule-item .time {
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                .schedule-item .event {
+                    color: #000;
+
+                    margin-left: 40px;
+
+                    @include m.sp {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .schedule-item:hover {
+                    background-color: #DAEFFA;
+                    transform: translateY(-2px);
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+
+    }
+
+    .handwash {
+        width: 15%;
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+
+        @include m.sp {
+            bottom: 100px;
+            left: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .peint {
+        width: 15%;
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+
+        @include m.sp {
+            bottom: 100px;
+            right: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-menu {
+        margin-bottom: 250px;
+
+        @include m.sp {
+            margin-bottom: 80px;
+        }
+    }
+}

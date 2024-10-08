@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Hina+Mincho&family=Nanum+Gothic:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<body>
+    <header class="header">
+        <h1 class="header-logo">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+        </h1>
+        <nav class="header-nav" id="js-nav">
+            <ul class="header-nav-list">
+                <li>
+                    <a href="flow.html" class="icon-text">
+                        <i class="fa-solid fa-house-chimney fa-2x"></i>
+                        <span>ご利用の流れ</span>
+                    </a>
+                </li>
+                <li><a href="schedule.html">
+                        <i class="fa-solid fa-clock fa-2x"></i>
+                        <span>にじいろの１日</span>
+                    </a></li>
+                <li><a href="activity.html">
+                        <i class="fa-solid fa-heart fa-2x"></i>
+                        <span>活動内容</span>
+                    </a></li>
+                <li><a href=" recruit.html">
+                        <i class="fa-solid fa-pen-nib fa-2x"></i>
+                        <span>採用情報</span>
+                    </a></li>
+                <li><a href="contact.html">
+                        <i class="fa-solid fa-envelope fa-2x"></i>
+                        <span>お問い合わせ</span>
+                    </a></li>
+            </ul>
+            <button class="top-page btn">
+                <a href="index.html">トップページ</a>
+            </button>
+        </nav>
+        <button class="toggle-btn" id="js-toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+    <main class="recruit-page">
+        <div class="mainvisual">
+            <p>採用情報</p>
+        </div>
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html">
+                    <span itemprop="name"><i class="fa fa-home fa-fw" aria-hidden="true"></i>ホーム</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="recruit.html">
+                    <span itemprop="name">採用情報</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+        <section class="recruit wrapper">
+            <h2 class="page-section-title">募集要項</h2>
+            <div class="tab-inner">
+                <!-- タブメニュー -->
+                <ul class="tabs">
+                    <li class="tab active" data-tab="fulltime">正社員</li>
+                    <li class="tab" data-tab="parttime">パート</li>
+                </ul>
+
+                <!-- 正社員の募集要項 -->
+                <div class="tab-content active" id="fulltime">
+                    <h3>正社員募集要項</h3>
+                    <dl>
+                        <dt>勤務時間:</dt>
+                        <dd>9:00〜18:00</dd>
+                    </dl>
+                    <dl>
+                        <dt>給与: </dt>
+                        <dd>月給 240,000円〜</dd>
+                    </dl>
+                    <dl>
+                        <dt>福利厚生:</dt>
+                        <dd>社会保険完備、交通費支給</dd>
+                    </dl>
+                </div>
+
+                <!-- パートの募集要項 -->
+                <div class="tab-content" id="parttime">
+                    <h3>パート募集要項</h3>
+                    <dl>
+                        <dt>勤務時間:</dt>
+                        <dd>週3日〜、1日4時間〜</dd>
+                    </dl>
+                    <dl>
+                        <dt>時給:</dt>
+                        <dd>1,200円〜</dd>
+                    </dl>
+                    <dl>
+                        <dt>福利厚生:</dt>
+                        <dd>交通費支給、昇給制度あり</dd>
+                    </dl>
+                </div>
+            </div>
+
+        </section>
+        <section class="info-menu container">
+            <ul class="info-item">
+
+                <li><a href="schedule.html">
+                        <div class="img">
+                            <img class="main-img" src="img/30760340_s (1).png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="title">にじいろの一日</p>
+                            <p class="description">登園～の
+                                1日のスケジュールです。一人ひとりに合った遊びと学びで個性を育み、お子さまの才能を引き出すお手伝いをいたします。
+                            </p>
+                        </div>
+                        <button class="readmore btn yureru-j">
+                            <a href="schedule.html">click!
+                            </a>
+                        </button>
+                    </a>
+                </li>
+                <li><a href="flow.html">
+                        <div class="img">
+                            <img class="main-img" src="img/info2.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="title">ご利用までの流れ</p>
+                            <p class="description">お問い合わせいただいてからの流れです。スタッフ一同、皆さまとお会いできる日を楽しみにしております。</p>
+                        </div>
+                        <button class="readmore btn yureru-j">
+                            <a href="flow.html">click!</a>
+                        </button>
+                    </a>
+                </li>
+                <li><a href="activity.html">
+                        <div class="img">
+                            <img class="main-img" src="img/info3.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="title">活動内容</p>
+                            <p class="description">にじいろでの活動をまとめました。お子さまの気持ちに寄り添いながら
+                                遊びを通し、「本来持っている力」を引き出します。</p>
+                        </div>
+                        <button class="readmore btn yureru-j">
+                            <a href="activity.html">click!</a>
+                        </button>
+                    </a>
+                </li>
+                <li><a href="">
+                        <div class="img">
+                            <img class="main-img" src="img/info4.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p class="title">お問い合わせ</p>
+                            <p class="description">ご見学やご質問などのお問い合わせはこちらからどうぞ。どのようなことでもお気軽にお問い合わせください。</p>
+                        </div>
+                        <button class="readmore btn yureru-j">
+                            <a href="contact.html">click!</a>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <button type="button" id="top-to-btn"></button>
+    <footer>
+        <div class="text">
+            <h3>お問い合わせはこちらから</h3>
+            <div class="tel">
+                <i class="fa-solid fa-phone-volume"></i>052-xxx-xxxx
+            </div>
+            <p><span>月～土:</span>9：00～18：00</p>
+        </div>
+        <button class="form btn">
+            <a href="contact.html"><i class="fa-regular fa-envelope"></i>お問い合わせフォーム</a>
+        </button>
+    </footer>
+
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
