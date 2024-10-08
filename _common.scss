@@ -311,6 +311,15 @@ a {
 
             @include m.sp {
                 display: block;
+
+                &:active {
+                    background-color: #4EC336;
+
+                    // .form.btnがhoverされたときにa要素の色を変える
+                    a {
+                        color: #FFEB14;
+                    }
+                }
             }
 
 
@@ -491,6 +500,11 @@ a {
 
             @include m.sp {
                 width: 70%;
+
+                &:active {
+                    transform: rotate(0);
+                    /* ホバー時に回転をリセット */
+                }
             }
 
             &:hover {
@@ -765,6 +779,15 @@ footer {
             font-size: 1.6rem;
             margin-top: 10px;
             padding: 10px 20px;
+
+            &:active {
+                background-color: #4EC336;
+
+                // .form.btnがhoverされたときにa要素の色を変える
+                a {
+                    color: #FFEB14;
+                }
+            }
         }
 
         &:hover {

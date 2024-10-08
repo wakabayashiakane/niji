@@ -281,6 +281,12 @@ a {
   .header .header-nav .top-page.btn {
     display: block;
   }
+  .header .header-nav .top-page.btn:active {
+    background-color: #4EC336;
+  }
+  .header .header-nav .top-page.btn:active a {
+    color: #FFEB14;
+  }
 }
 @media screen and (max-width: 768px) {
   .header .header-nav .top-page.btn {
@@ -422,7 +428,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-4.4585267755deg);
+  transform: rotate(-1.2471185399deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
@@ -431,6 +437,10 @@ a {
 @media screen and (max-width: 768px) {
   .info-menu .info-item .img {
     width: 70%;
+  }
+  .info-menu .info-item .img:active {
+    transform: rotate(0);
+    /* ホバー時に回転をリセット */
   }
 }
 .info-menu .info-item .img:hover {
@@ -695,6 +705,12 @@ footer .form.btn {
     font-size: 1.6rem;
     margin-top: 10px;
     padding: 10px 20px;
+  }
+  footer .form.btn:active {
+    background-color: #4EC336;
+  }
+  footer .form.btn:active a {
+    color: #FFEB14;
   }
 }
 footer .form.btn:hover {
