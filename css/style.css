@@ -428,7 +428,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-6.3358048661deg);
+  transform: rotate(-6.4011291425deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
@@ -1469,6 +1469,12 @@ footer .form.btn i.fa-envelope {
   .schedule-page .schedule .schedule-container {
     flex-direction: column;
     font-size: 1.6rem;
+    background-image: url("../img/2657901.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
   }
 }
 .schedule-page .schedule .schedule-container::before {
@@ -1568,8 +1574,7 @@ footer .form.btn i.fa-envelope {
 }
 @media screen and (max-width: 768px) {
   .schedule-page .handwash {
-    bottom: 100px;
-    left: 20px;
+    display: none;
   }
 }
 .schedule-page .handwash img {
@@ -1583,8 +1588,7 @@ footer .form.btn i.fa-envelope {
 }
 @media screen and (max-width: 768px) {
   .schedule-page .peint {
-    bottom: 100px;
-    right: 20px;
+    display: none;
   }
 }
 .schedule-page .peint img {
