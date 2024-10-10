@@ -332,6 +332,7 @@ a {
 
             @include m.sp {
                 display: block;
+                transition: none;
 
                 font-size: 1.6rem;
 
