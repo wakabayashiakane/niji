@@ -804,6 +804,8 @@ footer {
             font-size: 1.6rem;
             margin-top: 10px;
             padding: 10px 20px;
+            transition: none;
+
 
             // SPでactive状態のスタイル
             &:active {

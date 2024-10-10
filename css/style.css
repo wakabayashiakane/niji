@@ -429,7 +429,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-3.1474378464deg);
+  transform: rotate(-8.6055567092deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
@@ -718,6 +718,7 @@ footer .form.btn i.fa-envelope {
     font-size: 1.6rem;
     margin-top: 10px;
     padding: 10px 20px;
+    transition: none;
   }
   footer .form.btn:active {
     background-color: #4EC336;
