@@ -307,30 +307,13 @@ a {
             font-weight: bold;
             margin-top: 20px;
             transition: all 0.5s;
-            display: none;
+            display: none; // 初期状態はPC向けに非表示
 
-            @include m.sp {
-                display: block;
-
-                &:active {
-                    background-color: #4EC336;
-
-                    // .form.btnがhoverされたときにa要素の色を変える
-                    a {
-                        color: #FFEB14;
-                    }
-                }
-            }
-
-
-            @include m.sp {
-                font-size: 1.6rem;
-            }
-
+            // PCでのhoverスタイル
             &:hover {
                 background-color: #4EC336;
 
-                // .form.btnがhoverされたときにa要素の色を変える
+                // hoverされたときにa要素の色を変える
                 a {
                     color: #FFEB14;
                 }
@@ -340,13 +323,36 @@ a {
             a {
                 color: #4EC336;
                 display: block;
+            }
 
-                @include m.sp {
+            i.fa-envelope {
+                margin-right: 8px;
+                /* アイコンとテキストの間に余白を追加 */
+            }
+
+            // スマートフォン向けのスタイル
+            @include m.sp {
+                display: block; // スマホでは表示される
+
+                font-size: 1.6rem;
+
+                // スマホでactive状態のスタイル
+                &:active {
+                    background-color: #4EC336;
+
+                    // active状態でa要素の色を変える
+                    a {
+                        color: #FFEB14;
+                    }
+                }
+
+                // 通常のa要素のスタイル（スマホ版）
+                a {
                     font-size: 1.6rem;
                 }
             }
-
         }
+
 
 
         @include m.sp {
@@ -775,21 +781,7 @@ footer {
         margin-top: 20px;
         transition: all 0.5s;
 
-        @include m.sp {
-            font-size: 1.6rem;
-            margin-top: 10px;
-            padding: 10px 20px;
-
-            &:active {
-                background-color: #4EC336;
-
-                // .form.btnがhoverされたときにa要素の色を変える
-                a {
-                    color: #FFEB14;
-                }
-            }
-        }
-
+        // PCのhover時のスタイル
         &:hover {
             background-color: #4EC336;
 
@@ -803,15 +795,33 @@ footer {
         a {
             color: #4EC336;
             display: block;
-
-            @include m.sp {
-                font-size: 1.6rem;
-            }
         }
 
         i.fa-envelope {
             margin-right: 8px;
             /* アイコンとテキストの間に余白を追加 */
+        }
+
+        // メディアクエリ：スマートフォン用のスタイル
+        @include m.sp {
+            font-size: 1.6rem;
+            margin-top: 10px;
+            padding: 10px 20px;
+
+            // SPでactive状態のスタイル
+            &:active {
+                background-color: #4EC336;
+
+                // .form.btnがactiveされたときにa要素の色を変える
+                a {
+                    color: #FFEB14;
+                }
+            }
+
+            // 通常のa要素のスタイル（SP版）
+            a {
+                font-size: 1.6rem;
+            }
         }
     }
 }

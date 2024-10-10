@@ -277,22 +277,6 @@ a {
   transition: all 0.5s;
   display: none;
 }
-@media screen and (max-width: 768px) {
-  .header .header-nav .top-page.btn {
-    display: block;
-  }
-  .header .header-nav .top-page.btn:active {
-    background-color: #4EC336;
-  }
-  .header .header-nav .top-page.btn:active a {
-    color: #FFEB14;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header .header-nav .top-page.btn {
-    font-size: 1.6rem;
-  }
-}
 .header .header-nav .top-page.btn:hover {
   background-color: #4EC336;
 }
@@ -303,7 +287,21 @@ a {
   color: #4EC336;
   display: block;
 }
+.header .header-nav .top-page.btn i.fa-envelope {
+  margin-right: 8px;
+  /* アイコンとテキストの間に余白を追加 */
+}
 @media screen and (max-width: 768px) {
+  .header .header-nav .top-page.btn {
+    display: block;
+    font-size: 1.6rem;
+  }
+  .header .header-nav .top-page.btn:active {
+    background-color: #4EC336;
+  }
+  .header .header-nav .top-page.btn:active a {
+    color: #FFEB14;
+  }
   .header .header-nav .top-page.btn a {
     font-size: 1.6rem;
   }
@@ -428,7 +426,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-4.1933272839deg);
+  transform: rotate(-1.0630789136deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
@@ -698,6 +696,20 @@ footer .form.btn {
   margin-top: 20px;
   transition: all 0.5s;
 }
+footer .form.btn:hover {
+  background-color: #4EC336;
+}
+footer .form.btn:hover a {
+  color: #FFEB14;
+}
+footer .form.btn a {
+  color: #4EC336;
+  display: block;
+}
+footer .form.btn i.fa-envelope {
+  margin-right: 8px;
+  /* アイコンとテキストの間に余白を追加 */
+}
 @media screen and (max-width: 768px) {
   footer .form.btn {
     font-size: 1.6rem;
@@ -710,25 +722,9 @@ footer .form.btn {
   footer .form.btn:active a {
     color: #FFEB14;
   }
-}
-footer .form.btn:hover {
-  background-color: #4EC336;
-}
-footer .form.btn:hover a {
-  color: #FFEB14;
-}
-footer .form.btn a {
-  color: #4EC336;
-  display: block;
-}
-@media screen and (max-width: 768px) {
   footer .form.btn a {
     font-size: 1.6rem;
   }
-}
-footer .form.btn i.fa-envelope {
-  margin-right: 8px;
-  /* アイコンとテキストの間に余白を追加 */
 }
 
 .page-section-title {
