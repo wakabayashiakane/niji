@@ -1,71 +1,70 @@
 $(function () {
-    // ローダー終了（画像とテキストの両方を消す）
     function end_loader() {
         $('.loader').css({
             'visibility': 'hidden',
             'opacity': 0
         }).fadeOut(500, function () {
-            $(this).remove();  // 完全に削除
+            $(this).remove();  // ローダーを完全に削除
+            // メインビジュアルをフェードイン
             $('.mainvisual').css({
                 'visibility': 'visible',
                 'opacity': 1
-            }).animate({ opacity: 1 }, 500);  // メインビジュアルを短時間でフェードイン
+            }).animate({ opacity: 1 }, 500);
+
+            // ヘッダーもフェードイン
+            $('header').css({
+                'visibility': 'visible',
+                'opacity': 1
+            }).animate({ opacity: 1 }, 500);  // ヘッダーをフェードイン
         });
     }
 
-    // 一文字ずつテキストを表示
     function show_txt_one_by_one() {
-        var text = $('.loader .txt').text();  // テキストを取得
-        var textArray = text.split('');       // テキストを一文字ずつ配列に分割
-        $('.loader .txt').text('');           // 元のテキストを空にする
-        $('.loader .txt').css('display', 'block');  // テキストを表示可能にする
+        var text = $('.loader .txt').text();
+        var textArray = text.split('');
+        $('.loader .txt').text('');
+        $('.loader .txt').css('display', 'block');
 
         textArray.forEach(function (char, index) {
             setTimeout(function () {
-                $('.loader .txt').append(char);  // 一文字ずつ追加
-            }, 80 * index);  // 80ミリ秒ごとに文字を追加
+                $('.loader .txt').append(char);
+            }, 80 * index);
         });
     }
 
-    // 初回訪問時かどうかを確認
     if (!sessionStorage.getItem('visited')) {
-        // 初回訪問ならローダーを表示
         $('.loader').css({
             'visibility': 'visible',
             'opacity': 1
         });
 
-        // タイマー処理
         $(window).on('load', function () {
-            // 1. 1秒後に一文字ずつテキストを表示
             setTimeout(function () {
-                show_txt_one_by_one();  // テキストを一文字ずつ表示
+                show_txt_one_by_one();
             }, 1000);
 
-            // 2. 画像とテキストを3.5秒後に同時に消す
             setTimeout(function () {
-                end_loader();  // ローダー全体をフェードアウト（画像とテキストを一緒に消す）
+                end_loader();
             }, 3500);
 
-            // 訪問済みフラグを設定
             sessionStorage.setItem('visited', 'true');
         });
     } else {
-        // 2回目以降の訪問ではローダーを非表示
         $('.loader').remove();
-        $('.mainvisual').css({
+
+        // 2回目以降の訪問でも、ヘッダーとメインビジュアルをフェードイン
+        $('.mainvisual, header').css({
             'visibility': 'visible',
             'opacity': 1
-        }).animate({ opacity: 1 }, 500);  // メインビジュアルを短時間でフェードイン
+        }).animate({ opacity: 1 }, 200);
     }
 
-    // ページ内のスクロールやトップに戻った時もメインビジュアルを表示
     $(window).on('scroll', function () {
-        if ($(this).scrollTop() === 0) {  // スクロールがトップに到達した時
-            $('.mainvisual').css({
+        if ($(this).scrollTop() === 0) {
+            $('.mainvisual, header').css({
                 'visibility': 'visible',
                 'opacity': 1
-            }).animate({ opacity: 1 }, 200);  // 短時間でフェードイン
+            }).animate({ opacity: 1 }, 200);
         }
     });
 });

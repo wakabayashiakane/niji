@@ -157,6 +157,9 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0px 3%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -289,7 +292,6 @@ a {
 }
 .header .header-nav .top-page.btn i.fa-envelope {
   margin-right: 8px;
-  /* アイコンとテキストの間に余白を追加 */
 }
 @media screen and (max-width: 768px) {
   .header .header-nav .top-page.btn {
@@ -426,7 +428,7 @@ a {
   position: relative;
   border: 10px solid #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transform: rotate(-1.0630789136deg);
+  transform: rotate(-6.3358048661deg);
   transition: transform 0.3s;
   margin-left: auto;
   margin-right: auto;
