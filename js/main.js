@@ -1,73 +1,73 @@
-// $(function () {
-//     function end_loader() {
-//         $('.loader').css({
-//             'visibility': 'hidden',
-//             'opacity': 0
-//         }).fadeOut(500, function () {
-//             $(this).remove();  // ローダーを完全に削除
-//             // メインビジュアルをフェードイン
-//             $('.mainvisual').css({
-//                 'visibility': 'visible',
-//                 'opacity': 1
-//             }).animate({ opacity: 1 }, 500);
+$(function () {
+    function end_loader() {
+        $('.loader').css({
+            'visibility': 'hidden',
+            'opacity': 0
+        }).fadeOut(500, function () {
+            $(this).remove();  // ローダーを完全に削除
+            // メインビジュアルをフェードイン
+            $('.mainvisual').css({
+                'visibility': 'visible',
+                'opacity': 1
+            }).animate({ opacity: 1 }, 500);
 
-//             // ヘッダーもフェードイン
-//             $('header').css({
-//                 'visibility': 'visible',
-//                 'opacity': 1
-//             }).animate({ opacity: 1 }, 500);  // ヘッダーをフェードイン
-//         });
-//     }
+            // ヘッダーもフェードイン
+            $('header').css({
+                'visibility': 'visible',
+                'opacity': 1
+            }).animate({ opacity: 1 }, 500);  // ヘッダーをフェードイン
+        });
+    }
 
-//     function show_txt_one_by_one() {
-//         var text = $('.loader .txt').text();
-//         var textArray = text.split('');
-//         $('.loader .txt').text('');
-//         $('.loader .txt').css('display', 'block');
+    function show_txt_one_by_one() {
+        var text = $('.loader .txt').text();
+        var textArray = text.split('');
+        $('.loader .txt').text('');
+        $('.loader .txt').css('display', 'block');
 
-//         textArray.forEach(function (char, index) {
-//             setTimeout(function () {
-//                 $('.loader .txt').append(char);
-//             }, 80 * index);
-//         });
-//     }
+        textArray.forEach(function (char, index) {
+            setTimeout(function () {
+                $('.loader .txt').append(char);
+            }, 80 * index);
+        });
+    }
 
-//     if (!sessionStorage.getItem('visited')) {
-//         $('.loader').css({
-//             'visibility': 'visible',
-//             'opacity': 1
-//         });
+    if (!sessionStorage.getItem('visited')) {
+        $('.loader').css({
+            'visibility': 'visible',
+            'opacity': 1
+        });
 
-//         $(window).on('load', function () {
-//             setTimeout(function () {
-//                 show_txt_one_by_one();
-//             }, 1000);
+        $(window).on('load', function () {
+            setTimeout(function () {
+                show_txt_one_by_one();
+            }, 1000);
 
-//             setTimeout(function () {
-//                 end_loader();
-//             }, 3500);
+            setTimeout(function () {
+                end_loader();
+            }, 3500);
 
-//             sessionStorage.setItem('visited', 'true');
-//         });
-//     } else {
-//         $('.loader').remove();
+            sessionStorage.setItem('visited', 'true');
+        });
+    } else {
+        $('.loader').remove();
 
-//         // 2回目以降の訪問でも、ヘッダーとメインビジュアルをフェードイン
-//         $('.mainvisual, header').css({
-//             'visibility': 'visible',
-//             'opacity': 1
-//         }).animate({ opacity: 1 }, 200);
-//     }
+        // 2回目以降の訪問でも、ヘッダーとメインビジュアルをフェードイン
+        $('.mainvisual, header').css({
+            'visibility': 'visible',
+            'opacity': 1
+        }).animate({ opacity: 1 }, 200);
+    }
 
-//     $(window).on('scroll', function () {
-//         if ($(this).scrollTop() === 0) {
-//             $('.mainvisual, header').css({
-//                 'visibility': 'visible',
-//                 'opacity': 1
-//             }).animate({ opacity: 1 }, 200);
-//         }
-//     });
-// });
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() === 0) {
+            $('.mainvisual, header').css({
+                'visibility': 'visible',
+                'opacity': 1
+            }).animate({ opacity: 1 }, 200);
+        }
+    });
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {

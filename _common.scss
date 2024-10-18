@@ -105,55 +105,55 @@ a {
 }
 
 
-// .loader {
-//     position: fixed;
-//     width: 100%;
-//     height: 100%;
-//     background-image: url('../img/a746ed11-6a37-45dd-9662-9a4407665aa0.jpg');
-//     background-position: center;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     z-index: 9999;
-//     top: 0;
-//     left: 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     visibility: hidden;
-//     opacity: 0;
-//     transition: opacity 0.5s ease, visibility 0.5s ease;
-//     /* アニメーション効果 */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/a746ed11-6a37-45dd-9662-9a4407665aa0.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* アニメーション効果 */
 
-//     .loader-item {
+    .loader-item {
 
-//         display: flex;
-//         flex-direction: column;
-//         /* 子要素を縦に並べる */
-//         justify-content: center;
-//         align-items: center;
-//         /* 画像とテキストを中央揃えに */
-//         position: relative;
-//     }
+        display: flex;
+        flex-direction: column;
+        /* 子要素を縦に並べる */
+        justify-content: center;
+        align-items: center;
+        /* 画像とテキストを中央揃えに */
+        position: relative;
+    }
 
-//     img {
-//         width: 350px;
-//     }
+    img {
+        width: 350px;
+    }
 
-//     .txt {
-//         font-size: 3.2rem;
-//         font-weight: bold;
-//         color: #ffffff;
-//         text-shadow: 2px 2px 2px #555;
-//         display: none;
-//         z-index: 600;
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         width: 100%;
-//     }
+    .txt {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 2px #555;
+        display: none;
+        z-index: 600;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
 
-// }
+}
 
 .fadein {
     opacity: 0;
@@ -174,9 +174,9 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 0px 3%;
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 
     @include m.sp {
         height: 50px;
